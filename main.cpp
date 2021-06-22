@@ -9,7 +9,7 @@ int main()
 	google::InitGoogleLogging("calibrator");
 	google::LogToStderr();
 	std::vector<cv::String> images;
-	cv::glob("../../images/*.jpg", images);
+	cv::glob("../images/*.jpg", images);
 	std::vector<cv::Mat> vec_mat;
 	for (const auto &path:images)
 	{
@@ -36,5 +36,5 @@ int main()
 		0, 532.91928339, 233.90060514,
 		0, 0, 1;
 	std::cout << "opencv calibrateCamera api result:\n" << opencv_camera_matrix << std::endl; 
-	std::cin.get();
+	return 0;
 }
